@@ -1,0 +1,13 @@
+@use '../../variables' as *; // استيراد المتغيرات
+
+footer {
+    background-color: $dark-gray-color;
+    padding: 20px 30px;
+    
+    .footer-link {
+        color: black;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="/home">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- القائمة (الروابط) -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/home">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/home"> التقارير</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">لوحة التحكم</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- أيقونات المستخدم -->
+      <div class="d-flex justify-content-between">
+        <i class="bi bi-globe" style="font-size: 24px;"></i>
+        <i class="bi bi-person-circle" style="font-size: 24px; color: #3d9140;"></i>
+        <div class="text-center mx-2">
+          <span style="font-size: 16px; font-weight: bold;">أحمد بدر</span><br>
+          <span style="font-size: 14px; color: #777;">مدير</span>
+        </div>
+        <i class="bi bi-power" style="font-size: 24px; color: #f66; cursor: pointer;" (click)="showPopup()"></i>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div id="logoutPopup" class="popup-overlay" style="display: none;">
+  <div class="popup-content">
+    <h5>تأكيد تسجيل الخروج</h5>
+    <p>هل ترغب في تأكيد تسجيل خروجك من بوابة إيجاز؟</p>
+    <button class="btn btn-outline-dark" (click)="closePopup()">إلغاء</button>
+    <button class="btn btn-dark" (click)="logout()">تسجيل الخروج</button>
+  </div>
+</div>

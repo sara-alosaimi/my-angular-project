@@ -1,0 +1,45 @@
+@use '../../variables' as *; // استيراد المتغيرات
+
+
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-form {
+    width: 72%;
+    margin: auto;
+  }
+  .logo-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .logo-section img {
+    max-width: 40%;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-custom {
+    background-color: #25935f;
+    color: white;
+    width: 100%;
+    border-radius: 6px;
+  }
+  .form-control {
+    border-radius: 6px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .login-form {
+    margin-right: 35px;
+}
+.form-title.text-center {
+  color: $primary-color;
+}

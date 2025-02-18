@@ -1,0 +1,89 @@
+@use '../../variables' as *;
+@use '../content/content.component.scss' as *;
+@use '../features/features.component.scss' as *;
+
+.green-title {
+    text-align: right;
+    font-size: 28px;
+}
+
+
+.card-e {
+    align-items: start;
+    width: 100%;
+    padding: 6px;
+    border-radius: 0;
+    border: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+
+    a {
+        color: black;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.d-flex {
+    display: flex;
+    gap: 18px;
+    flex-wrap: nowrap;
+}
+
+ .card-icon{
+    width: 60px !important;
+}
+.card-body img {
+    width: 100%;
+}
+.card-e .card-body {
+    padding: 20px;
+    width: 100%;
+}
+
+i.fa.fa-chevron-left {
+    font-size: 21px;
+    margin-bottom: 9px;
+}
+
+.title-icon {
+    width: 36px;
+    margin-left: 14px;
+}
+.d-flex .p-2 {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .d-flex .p-2 {
+        width: 100%;
+    }
+    .green-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .card-e {
+        width: 100%;
+    }
+
+    .d-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-icon {
+        width: 36px;
+    }
+
+    i.fa.fa-chevron-left {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+
+    .title-icon {
+        width: 32px;
+        margin-left: 10px;
+    }
+}

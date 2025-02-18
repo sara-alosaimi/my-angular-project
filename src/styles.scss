@@ -1,0 +1,59 @@
+// استيراد SCSS الخاص بـ Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+// استيراد المتغيرات والتخطيطات
+@import 'variables';  // تأكد من أن المسار إلى _variables.scss صحيح
+@import 'layout';  // استيراد ملف layout.scss
+
+@font-face {
+  font-family: 'DIN Next Arabic Black';
+  src: url('assets/fonts/DIN-NEXT-ARABIC-BLACK.otf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next Arabic Bold';
+  src: url('assets/fonts/DIN-NEXT-ARABIC-BOLD.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next Arabic M';
+  src: url('assets/fonts/DIN-NEXT-ARABIC-MEDIUM.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next Arabic R';
+  src: url('assets/fonts/DIN-NEXT-ARABIC-REGULAR.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next Arabic L';
+  src: url('assets/fonts/DIN-NEXT-ARABIC-LIGHT.otf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+* {
+  font-family: 'DIN Next Arabic R', sans-serif; 
+}
+h1,h2,h3 {
+  font-family: 'DIN Next Arabic Bold', sans-serif; 
+}
+h4,h5 {
+  font-family: 'DIN Next Arabic M', sans-serif; 
+}
+p {
+  color: $gray-p;
+}
+a {
+  color: $green-color;
+  text-decoration-line: none;
+}

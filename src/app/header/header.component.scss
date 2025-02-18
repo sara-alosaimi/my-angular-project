@@ -1,0 +1,93 @@
+@use '../../variables' as *; // استيراد المتغيرات
+
+header {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // إضافة ظل خفيف أسفل الهيدر
+  padding: 20px;
+  background: white;
+  position:relative;
+  z-index: 2000;
+  .navbar {
+    padding: 0 20px;
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $primary-color; // استخدام اللون الأساسي للموقع
+      font-family: 'DIN Next Arabic M';
+    }
+
+    .navbar-nav {
+      .nav-item {
+        padding-left: 20px;
+      }
+
+      .nav-link {
+        color: black; // الروابط ستكون باللون الأساسي
+        font-family: 'DIN Next Arabic M';
+        font-weight: 500;
+        transition: color 0.3s;
+        border-radius: 6px;
+        padding: 18px 12px;
+        text-decoration: none; // إزالة التحديد الافتراضي للنص
+        position: relative;  // لإضافة العنصر ::before
+
+        // عند التمرير أو إذا كان الرابط نشطًا
+        &:hover,
+        &.active {
+          color: white;  // عند التمرير أو إذا كان العنصر نشطًا، يغير اللون إلى اللون الثانوي
+          background-color: $primary-color;
+        }
+
+        // تأثير الخط في الجزء السفلي من الرابط عند hover و active باستخدام ::before
+        &::before {
+            content: '';  // محتوى فارغ لإنشاء عنصر
+            position: absolute;
+            bottom: 0px;
+            width: 87%;
+            border-radius: 4px;
+            justify-self: anchor-center;
+            height: 6px;
+            background-color: $green-color;
+            opacity: 0;  // الخط سيكون مخفيًا بشكل افتراضي
+            transition: opacity 0.3s;
+        }
+
+        // إظهار الخط عند hover أو active
+        &:hover::before,
+        &.active::before {
+          opacity: 1;  // إظهار الخط عند التمرير أو عندما يكون الرابط نشطًا
+        }
+      }
+    }
+  }
+
+  // زر "تسجيل دخول"
+  .btn-primary {
+    background-color: $primary-color; // اللون الأساسي للزر
+    color: white;  // اللون النصي
+    border: none;
+    padding: 10px 20px;  // المسافات داخل الزر
+    border-radius: 6px;  // جعل الزر مستديرًا
+    font-family: 'DIN Next Arabic M';
+    font-weight: 500;
+    text-align: center;  // محاذاة النص إلى المركز
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, box-shadow 0.3s; // تأثير التمرير
+
+    // إضافة السهم داخل الزر باستخدام ::before
+    &::after {
+        content: '\f104';  // رمز السهم لليسار باستخدام FontAwesome
+        font-family: 'Font Awesome 5 Free';  // تحديد عائلة الخط الخاصة بـ FontAwesome
+        font-weight: 900;  // تحديد الوزن
+        margin-right: 10px;  // المسافة بين السهم والنص
+        }
+
+    // تأثير التمرير
+    &:hover {
+      background-color: darken($primary-color, 10%);  // عند التمرير، يغمق اللون
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  // إضافة ظل عند التمرير
+    }
+  }
+}
